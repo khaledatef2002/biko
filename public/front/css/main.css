@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+
+.btn-primary {
+  --bs-btn-bg: #d2ae5d;
+  --bs-btn-border-color: #d2ae5d;
+  --bs-btn-hover-bg: #bc9a4c;
+  --bs-btn-hover-border-color: #bc9a4c;
+  --bs-btn-active-bg: #bc9a4c;
+  --bs-btn-active-border-color: #bc9a4c;
+}
+
+/* Custom styles - adjust as needed */
+body {
+  font-family: 'cairo', 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transition: 0.4s ease-in-out;
+}
+
+.navbar .nav-item .nav-link {
+  color: white;
+  transition: 0.4s ease-in-out;
+}
+
+.navbar.floating-nav .nav-item .nav-link {
+  color: #000;
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: bold;
+}
+
+.navbar .navbar-brand img {
+  height: 80px;
+  transition: 0.4s ease-in-out;
+}
+
+.navbar.floating-nav {
+  background-color: white;
+  position: fixed;
+  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+}
+
+.navbar.floating-nav .navbar-brand img {
+  height: 40px;
+}
+
+.hero {
+  background: url('hero-image.jpg') center center / cover no-repeat;
+  color: white;
+  text-align: center;
+  position: relative;
+  height: 100vh;
+}
+.hero video {
+  position: relative;
+  top: 0; left: 0; width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0)
+  );
+  pointer-events: none;
+}
+
+#scroll-down {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  animation: bounce 2s infinite;
+}
+
+#scroll-down svg {
+  width: 70px;
+  fill: white;
+  opacity: 0.8;
+}
+
+#about-us {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#about-us h1 {
+  font-size: 3.5rem;
+}
+.services .card {
+  border: none;
+  transition: transform .3s;
+}
+.services .card:hover {
+  transform: translateY(-10px);
+}
+.clients img {
+  object-fit: contain;
+}
+.clients img:hover {
+  filter: none;
+}
+.footer {
+  background-color: #000000;
+  color: #ccc;
+}
+.footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+.footer a:hover {
+  color: white;
+}
+
+#contact {
+  background-color: #d3ae5e;
+}
+
+    
+.loader {
+  width: 30px;
+  height: 30px;
+  border: 3px dotted #000000;
+  border-style: solid solid dotted dotted;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 2s linear infinite;
+}
+    
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+} 
+
+.loader-btn
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader-btn:disabled p
+{
+  display: none;
+}
+.loader-btn:disabled .loader
+{
+  display: inline-block;
+  margin: auto;
+}
+.loader-btn p
+{
+  margin: 3px !important;
+}
+.loader-btn .loader
+{
+  display: none;
+}
+
+.BlogLoader
+{
+  display: none;
+}
+
+#blog-header
+{
+  position: relative;
+  margin-bottom: 35px !important;
+}
+
+.blogs-card-body {
+  box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 15px 0px !important;
+  border: 1px solid #f3f1f8 !important;
+  background-color: var(--bg-white);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: .2s;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+}
+
+.blogs-card-image {
+  position: relative;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.blogs-card .blogs-card-body img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0px 0px;
+  transform: scale(1);
+  transition: .5s;
+}
+
+.blogs-card-body:hover img {
+  transform: scale(1.1);
+}
+.blogs-card-body:hover h5, .blogs-card-body:hover .date {
+  color: #d3ae5e !important;
+}
+.blogs-card .blogs-text h5, .blogs-card .blogs-text .date {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity));
+  transition: 0.5s;
+}
+
+.blogs-card .blogs-text p {
+  color: #4d4c4d;
+}
+
+.blog-container .blog-header h2 {
+  color: #4d4c4d;
+}
+
+.blog-container .blog-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#contact .container > div > div:last-of-type p:last-of-type {
+  margin-bottom: 0 !important;
+}
+
+#contact .container > div > div:last-of-type iframe {
+  flex: 1;
+  width: 100%;
+  margin-bottom: 7px;
+}
