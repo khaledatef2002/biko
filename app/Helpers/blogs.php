@@ -4,11 +4,11 @@ function truncatePost(string $text, int $limit = 100) : string {
     // Strip out the HTML tags temporarily
     $plainText = strip_tags($text);
 
-    $text = html_entity_decode($text, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+    $plainText = html_entity_decode($plainText, ENT_QUOTES | ENT_HTML5, 'UTF-8');
 
-    $text = str_replace("\u{00A0}", ' ', $text);
+    $plainText = str_replace("\u{00A0}", ' ', $plainText);
 
-    $text = preg_replace('/\s+/u', ' ', $text);
+    $plainText = preg_replace('/\s+/u', ' ', $plainText);
 
     // Check if the length exceeds the limit
     if (strlen($plainText) <= $limit) {
