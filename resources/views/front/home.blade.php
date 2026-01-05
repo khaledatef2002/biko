@@ -96,7 +96,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="message" class="form-label">@lang('custom.message')</label>
-                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="@lang('custom.message')"></textarea>
+                        <textarea class="form-control" id="message" name="message" rows="2" placeholder="@lang('custom.message')"></textarea>
                     </div>
                     <button type="submit" class="loader-btn btn bg-dark w-100 text-white fw-bold">
                         <p class="mb-0">
@@ -107,23 +107,23 @@
                 </form>
             </div>
             <div class="col-md-5 ps-5 mt-2 d-flex flex-column justify-content-center">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.0532422979913!2d31.464174200000002!3d30.064008299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458194288b3f6bb%3A0x461eb9f446915654!2sPromotru%20agency!5e0!3m2!1sen!2seg!4v1762527732896!5m2!1sen!2seg" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <p>
+                <iframe class="mb-3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.0532422979913!2d31.464174200000002!3d30.064008299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458194288b3f6bb%3A0x461eb9f446915654!2sPromotru%20agency!5e0!3m2!1sen!2seg!4v1762527732896!5m2!1sen!2seg" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p class="mb-1">
                     <i class="fa-solid fa-house"></i>
                     <span>{{ str_replace('http://', '', str_replace('https://', '', url('/'))) }}</span>
                 </p>
-                <p>
+                <p class="mb-1">
                     <i class="fa-solid fa-location-dot"></i>
                     <span>التجمع الأول أمام بوابة الرحاب - القاهرة الجديدة</span>
                 </p>
                 @if ($website_settings->phone_number)
-                    <p>
+                    <p class="mb-1">
                         <i class="fa-solid fa-phone"></i>
                         <span>{{ $website_settings->phone_number }}</span>
                     </p>
                 @endif
                 @if ($website_settings->email)
-                    <p>
+                    <p class="mb-1">
                         <i class="fa-solid fa-envelope"></i>
                         <span>{{ $website_settings->email }}</span>
                     </p>

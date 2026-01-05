@@ -68,7 +68,7 @@ class BlogController extends Controller implements HasMiddleware
     public function uploadImage(Request $request)
     {
         $request->validate([
-            'upload' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+            'upload' => 'required|image|mimes:jpeg,png,jpg,gif|max:10240'
         ]);
 
         
