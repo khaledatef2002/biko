@@ -42,6 +42,7 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('front/libs/sweetalert2/sweet.js') }}"></script>
+    @yield('js-after')
     <script src="{{ asset('front/js/main.js') }}"></script>
     <script src="{{ asset('front/js/main-module.js') }}" type="module"></script>
 </body>

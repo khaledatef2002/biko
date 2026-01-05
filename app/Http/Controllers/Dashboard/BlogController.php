@@ -70,7 +70,6 @@ class BlogController extends Controller implements HasMiddleware
         $request->validate([
             'upload' => 'required|image|mimes:jpeg,png,jpg,gif|max:10240'
         ]);
-
         
         $image = $request->file('upload');
         $imagePath = 'blogs/images/' . uniqid() . '.webp';
