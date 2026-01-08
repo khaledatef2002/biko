@@ -24,7 +24,15 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
-  transition: 0.4s ease-in-out;
+}
+
+.navbar:has(.navbar-collapse.show), .navbar:has(.navbar-collapse.collapsing) {
+  background-color: white;
+  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+}
+
+.navbar:has(.navbar-collapse.show) .nav-item .nav-link, .navbar:has(.navbar-collapse.collapsing) .nav-item .nav-link {
+  color: #000;
 }
 
 .navbar .nav-item .nav-link {
@@ -49,6 +57,7 @@ body {
   background-color: white;
   position: fixed;
   box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+  transition: 0.4s ease-in-out;
 }
 
 .navbar.floating-nav .navbar-brand img {
@@ -61,9 +70,12 @@ body {
   text-align: center;
   position: relative;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .hero video {
-  position: relative;
+  position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
   object-fit: cover;
   z-index: -1;
@@ -98,10 +110,7 @@ body {
 }
 
 #about-us {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
 }
 
 #about-us h1 {
@@ -263,4 +272,16 @@ body {
   flex: 1;
   width: 100%;
   margin-bottom: 7px;
+}
+
+@media screen and (max-width: 600px) {
+  #about-us h1 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #about-us h1 {
+    font-size: 2.5rem;
+  }
 }
